@@ -1,0 +1,10 @@
+compass0: {alpha: 0.86, blue: 0, enable: true, green: 255, position_x: 0.91, position_y: 0.15,
+  red: 0, scale: 20.0, shift: 0, thickness: 5, timeout: 0.5, tip_length: 0.73, topic: imu}
+text0: {alpha: 0.8, blue: 0, enable: true, green: 255, position_x: 0.895, position_y: 0.09,
+  red: 0, scale: 1.0, text_content: N, thickness: 3}
+text1: {alpha: 1.0, blue: 0, enable: true, green: 255, position_x: 0.83, position_y: 0.17,
+  red: 0, scale: 1.0, text_content: W, thickness: 3}
+text2: {alpha: 1.0, blue: 0, enable: true, green: 255, position_x: 0.895, position_y: 0.26,
+  red: 0, scale: 1.0, text_content: S, thickness: 3}
+text3: {alpha: 1.0, blue: 0, enable: true, green: 255, position_x: 0.95, position_y: 0.17,
+  red: 0, scale: 1.0, text_content: E, thickness: 3}

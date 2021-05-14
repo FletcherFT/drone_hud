@@ -1,0 +1,17 @@
+<launch>
+    <arg name="gscam_args" value="-v videotestsrc pattern=snow ! video/x-raw,width=1280,height=720"/>
+
+    <node type="drone_hud_node.py" pkg="drone_hud" name="drone_hud_node">
+        <rosparam command="load" file="$(find drone_hud)/params/basic_compass.yaml"/>
+        <remap from="image_in/compressed" to="camera/image_raw/compressed"/>
+        <remap from="image_out/compressed" to="annotated_img/compressed"/>
+    </node>
+    <node pkg="image_view" type="image_view" name="image_view_node">
+        <remap from="image" to="annotated_img"/>
+        <param name="image_transport" value="compressed"/>
+    </node>
+    <node pkg="gscam" type="gscam" name="gscam" output="screen">
+        <param name="gscam_config" value="$(arg gscam_args)"/>
+        <param name="camera_name" value="camera" />
+    </node>
+</launch>
